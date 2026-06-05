@@ -214,3 +214,90 @@
 <div class="card"><h3>pause</h3><p>إيقاف مؤقت</p><code>pause</code></div>
 
 </section>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CMD Guide DZ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">
+        <h1>CMD Guide DZ</h1>
+        <p>كل أوامر CMD في مكان واحد</p>
+    </div>
+
+    <input type="text" placeholder="ابحث عن أمر مثل ipconfig">
+</header>
+
+<div class="container">
+
+<aside class="sidebar">
+    <h2>التصنيفات</h2>
+
+    <button>🌐 أوامر الشبكة</button>
+    <button>📁 أوامر الملفات</button>
+    <button>⚙️ أوامر النظام</button>
+    <button>💾 إدارة الأقراص</button>
+    <button>🔒 أوامر الحماية</button>
+</aside>
+
+<main class="content">
+
+<h2>جميع أوامر CMD</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>ipconfig</h3>
+<p>عرض إعدادات الشبكة</p>
+<code>ipconfig /all</code>
+<button>نسخ</button>
+</div>
+
+<div class="card">
+<h3>ping</h3>
+<p>اختبار الاتصال بالإنترنت</p>
+<code>ping google.com</code>
+<button>نسخ</button>
+</div>
+
+<div class="card">
+<h3>tracert</h3>
+<p>تتبع الاتصال</p>
+<code>tracert google.com</code>
+<button>نسخ</button>
+</div>
+
+<div class="card">
+<h3>dir</h3>
+<p>عرض الملفات</p>
+<code>dir</code>
+<button>نسخ</button>
+</div>
+
+<div class="card">
+<h3>tasklist</h3>
+<p>عرض البرامج المفتوحة</p>
+<code>tasklist</code>
+<button>نسخ</button>
+</div>
+
+<div class="card">
+<h3>sfc</h3>
+<p>إصلاح ملفات النظام</p>
+<code>sfc /scannow</code>
+<button>نسخ</button>
+</div>
+
+</div>
+
+</main>
+</div>
+
+</body>
+</html>
