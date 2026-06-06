@@ -301,4 +301,96 @@
 
 </body>
 </html>
-    
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>CMD Guide DZ</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0b1220;
+color:white;
+direction:rtl;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#111827;
+}
+
+.sidebar{
+width:250px;
+background:#111827;
+padding:20px;
+height:100vh;
+}
+
+.sidebar button{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border:none;
+border-radius:10px;
+background:#1e293b;
+color:white;
+cursor:pointer;
+}
+
+.content{
+padding:20px;
+}
+
+.card{
+background:#111827;
+padding:20px;
+border-radius:10px;
+margin:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="topbar">
+<h1>CMD Guide DZ</h1>
+<input type="text" placeholder="ابحث عن أمر CMD">
+</header>
+
+<div style="display:flex;">
+
+<div class="sidebar">
+<h2>التصنيفات</h2>
+
+<button>الشبكة</button>
+<button>الملفات</button>
+<button>النظام</button>
+
+</div>
+
+<div class="content">
+
+<div class="card">
+<h2>ipconfig</h2>
+<p>عرض معلومات الشبكة</p>
+</div>
+
+<div class="card">
+<h2>ping</h2>
+<p>اختبار الاتصال</p>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>    
