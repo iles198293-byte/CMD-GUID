@@ -511,3 +511,150 @@ color:#00ff88;
 
 </body>
 </html>
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0b1220;
+color:white;
+direction:rtl;
+overflow-x:hidden;
+animation:fadeBody 1s ease;
+}
+
+@keyframes fadeBody{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+
+header{
+background:#111827;
+padding:20px;
+text-align:center;
+animation:slideDown 1s ease;
+}
+
+@keyframes slideDown{
+from{
+transform:translateY(-50px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+h1{
+color:#38bdf8;
+transition:0.3s;
+}
+
+h1:hover{
+transform:scale(1.05);
+}
+
+.search{
+width:60%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#1e293b;
+color:white;
+transition:0.3s;
+}
+
+.search:focus{
+outline:none;
+transform:scale(1.03);
+box-shadow:0 0 15px #2563eb;
+}
+
+.main{
+display:flex;
+}
+
+.menu{
+width:220px;
+background:#111827;
+padding:20px;
+height:100vh;
+animation:slideLeft 1s ease;
+}
+
+@keyframes slideLeft{
+from{
+transform:translateX(100px);
+opacity:0;
+}
+to{
+transform:translateX(0);
+opacity:1;
+}
+}
+
+.menu button{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:10px;
+background:#1e293b;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.menu button:hover{
+background:#2563eb;
+transform:scale(1.05);
+box-shadow:0 0 15px #2563eb;
+}
+
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+padding:20px;
+}
+
+.card{
+background:#111827;
+padding:20px;
+width:220px;
+border-radius:15px;
+transition:0.4s;
+animation:fadeUp 1s ease;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #2563eb;
+}
+
+@keyframes fadeUp{
+from{
+transform:translateY(40px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+code{
+display:block;
+background:black;
+padding:10px;
+border-radius:10px;
+margin-top:10px;
+color:#00ff88;
+}
+
+</style>
