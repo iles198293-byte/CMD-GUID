@@ -394,3 +394,120 @@ margin:10px;
 
 </body>
 </html>    
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>CMD Guide DZ</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#0b1220;
+color:white;
+direction:rtl;
+}
+
+header{
+background:#111827;
+padding:20px;
+text-align:center;
+}
+
+h1{
+color:#38bdf8;
+}
+
+.search{
+width:60%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#1e293b;
+color:white;
+}
+
+.main{
+display:flex;
+}
+
+.menu{
+width:220px;
+background:#111827;
+padding:20px;
+height:100vh;
+}
+
+.menu button{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:10px;
+background:#1e293b;
+color:white;
+cursor:pointer;
+}
+
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+padding:20px;
+}
+
+.card{
+background:#111827;
+padding:20px;
+width:220px;
+border-radius:15px;
+}
+
+code{
+display:block;
+background:black;
+padding:10px;
+border-radius:10px;
+margin-top:10px;
+color:#00ff88;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>CMD Guide DZ</h1>
+<input class="search" type="text" placeholder="ابحث عن أمر CMD">
+</header>
+
+<div class="main">
+
+<div class="menu">
+<button>الشبكة</button>
+<button>الملفات</button>
+<button>النظام</button>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h2>ipconfig</h2>
+<p>عرض الشبكة</p>
+<code>ipconfig /all</code>
+</div>
+
+<div class="card">
+<h2>ping</h2>
+<p>اختبار الإنترنت</p>
+<code>ping google.com</code>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
