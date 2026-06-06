@@ -658,3 +658,26 @@ color:#00ff88;
 }
 
 </style>
+<script>
+
+let buttons = document.querySelectorAll(".btn");
+
+buttons.forEach(button => {
+
+button.addEventListener("click", function(){
+
+let code = this.parentElement.querySelector("code").innerText;
+
+navigator.clipboard.writeText(code);
+
+this.innerText = "تم النسخ ✅";
+
+setTimeout(() => {
+this.innerText = "نسخ";
+}, 1500);
+
+});
+
+});
+
+</script>
