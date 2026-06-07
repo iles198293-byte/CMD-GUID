@@ -12,7 +12,7 @@
 <body>
 
 <header>
-<h1>CMD Guide DZ</h1>
+<h1>CMD Guide for windows</h1>
 <p>تعلم كل أوامر Windows CMD بسهولة</p>
 
 <input type="text" id="search" placeholder="ابحث عن أمر مثل ipconfig...">
@@ -48,6 +48,27 @@
 </section>
 
 <script src="script.js"></script>
+<script>
+
+function copyCode(button){
+
+let code =
+button.parentElement.querySelector("code").textContent;
+
+navigator.clipboard.writeText(code)
+.then(() => {
+
+button.innerHTML = "✅ تم النسخ";
+
+setTimeout(function(){
+button.innerHTML = "نسخ";
+},1500);
+
+});
+
+}
+
+</script>
 </body>
 </html># CMD-GUID
 <h2>🌐 أوامر الشبكة</h2>
@@ -1480,4 +1501,72 @@ Copy
 Copy
 </button>
 </div>
+<button class="btn" onclick="copyCode(this)">
+نسخ
+</button>
+<div class="card">
+
+<h2>ipconfig</h2>
+
+<p>عرض معلومات الشبكة</p>
+
+<code>ipconfig /all</code>
+
+<button class="btn" onclick="copyCode(this)">
+نسخ
+</button>
+
+</div>
+<div class="card">
+
+<h2>ipconfig</h2>
+
+<p>Show network information</p>
+
+<code>ipconfig /all</code>
+
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+
+</div>
+<div class="card">
+<script>
+
+function searchCommand() {
+
+let input =
+document.querySelector(".search").value.toLowerCase();
+
+let cards =
+document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let title =
+card.querySelector("h2").innerText.toLowerCase();
+
+let description =
+card.innerText.toLowerCase();
+
+if(
+title.includes(input) ||
+description.includes(input)
+){
+card.style.display = "block";
+}
+else{
+card.style.display = "none";
+}
+
+});
+
+}
+
+</script>
+<input 
+type="text" 
+class="search"
+placeholder="Search CMD command..."
+onkeyup="searchCommand()">
 
