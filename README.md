@@ -1480,4 +1480,4 @@ Copy
 Copy
 </button>
 </div>
-cmd-open.jpg
+
