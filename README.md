@@ -1071,3 +1071,212 @@ this.innerText = "نسخ";
 <code>net session</code>
 <button class="btn">نسخ</button>
 </div>
+<div class="card">
+<h2>netsh wlan show profiles</h2>
+<p>عرض شبكات Wi-Fi المحفوظة</p>
+<code>netsh wlan show profiles</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>netsh wlan show profile</h2>
+<p>عرض كلمة مرور Wi-Fi محفوظة</p>
+<code>netsh wlan show profile "WiFi" key=clear</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>ipconfig /flushdns</h2>
+<p>مسح DNS Cache</p>
+<code>ipconfig /flushdns</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>ipconfig /release</h2>
+<p>تحرير IP</p>
+<code>ipconfig /release</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>ipconfig /renew</h2>
+<p>تجديد IP</p>
+<code>ipconfig /renew</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>net user administrator</h2>
+<p>معلومات حساب المدير</p>
+<code>net user administrator</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>net accounts</h2>
+<p>إعدادات الحسابات</p>
+<code>net accounts</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>net config workstation</h2>
+<p>معلومات الجهاز</p>
+<code>net config workstation</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>wmic bios get serialnumber</h2>
+<p>Serial Number للجهاز</p>
+<code>wmic bios get serialnumber</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>wmic diskdrive get model</h2>
+<p>معلومات القرص</p>
+<code>wmic diskdrive get model</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>wmic cpu get name</h2>
+<p>اسم المعالج</p>
+<code>wmic cpu get name</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>wmic memorychip</h2>
+<p>معلومات الرام</p>
+<code>wmic memorychip get capacity</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>wmic os get caption</h2>
+<p>نسخة Windows</p>
+<code>wmic os get caption</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>gpresult /r</h2>
+<p>سياسات الجهاز</p>
+<code>gpresult /r</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>powercfg /energy</h2>
+<p>فحص البطارية والطاقة</p>
+<code>powercfg /energy</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>powercfg /batteryreport</h2>
+<p>تقرير البطارية</p>
+<code>powercfg /batteryreport</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>sc query</h2>
+<p>عرض الخدمات</p>
+<code>sc query</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>sc stop</h2>
+<p>إيقاف خدمة</p>
+<code>sc stop wuauserv</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>sc start</h2>
+<p>تشغيل خدمة</p>
+<code>sc start wuauserv</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>fsutil</h2>
+<p>إدارة نظام الملفات</p>
+<code>fsutil fsinfo drives</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>netstat -b</h2>
+<p>البرامج المتصلة بالإنترنت</p>
+<code>netstat -b</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>pathping</h2>
+<p>تحليل الاتصال</p>
+<code>pathping google.com</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>nbtstat</h2>
+<p>معلومات NetBIOS</p>
+<code>nbtstat -n</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>net file</h2>
+<p>الملفات المفتوحة على الشبكة</p>
+<code>net file</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>auditpol</h2>
+<p>سياسات الأمان</p>
+<code>auditpol /get /category:*</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>cipher /w</h2>
+<p>حذف آمن للبيانات</p>
+<code>cipher /w:C</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>wevtutil qe</h2>
+<p>سجلات الأحداث</p>
+<code>wevtutil qe System</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>logman</h2>
+<p>إدارة Logs</p>
+<code>logman query</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>tzutil /g</h2>
+<p>المنطقة الزمنية</p>
+<code>tzutil /g</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>systemreset</h2>
+<p>إعادة ضبط Windows</p>
+<code>systemreset</code>
+<button class="btn">نسخ</button>
+</div>
