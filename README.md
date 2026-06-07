@@ -1,4 +1,6 @@
 ![Uploading Capture.PNG…]()
+![Uploading Capture.PNG…]()
+
 
 <html lang="ar">
 <head>
@@ -29,6 +31,7 @@
 <p>اختبار الاتصال بالإنترنت</p>
 <code>ping google.com</code>
 </div>
+![Uploading Capture.PNG…]()
 
 <div class="card">
 <h2>cls</h2>
