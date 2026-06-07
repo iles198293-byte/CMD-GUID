@@ -1333,3 +1333,38 @@ button.innerHTML = "نسخ";
 }
 
 </script>
+<div class="card">
+
+<h2>ipconfig</h2>
+<p>عرض معلومات الشبكة</p>
+
+<code>ipconfig /all</code>
+
+<button onclick="copyCode(this)" class="btn">
+نسخ
+</button>
+
+</div>
+<div class="card">
+<h2>ping</h2>
+<code>ping google.com</code>
+<button onclick="copyCode(this)" class="btn">
+نسخ
+</button>
+</div>
+
+<div class="card">
+<h2>tasklist</h2>
+<code>tasklist</code>
+<button onclick="copyCode(this)" class="btn">
+نسخ
+</button>
+</div>
+
+<div class="card">
+<h2>sfc</h2>
+<code>sfc /scannow</code>
+<button onclick="copyCode(this)" class="btn">
+نسخ
+</button>
+</div>
