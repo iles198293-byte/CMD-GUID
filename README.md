@@ -5,7 +5,7 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>CMD Guide DZ</title>
+<title>CMD Guide windows</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -330,7 +330,7 @@ button.innerHTML = "نسخ";
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>CMD Guide DZ</title>
+<title>CMD Guide windows</title>
 
 <style>
 
@@ -1569,4 +1569,36 @@ type="text"
 class="search"
 placeholder="Search CMD command..."
 onkeyup="searchCommand()">
+<script>
 
+function searchCommand() {
+
+let input =
+document.getElementById("search")
+.value.toLowerCase();
+
+let cards =
+document.querySelectorAll(".card");
+
+for(let i = 0; i < cards.length; i++){
+
+let text =
+cards[i].innerText.toLowerCase();
+
+if(text.includes(input)){
+cards[i].style.display = "";
+}
+else{
+cards[i].style.display = "none";
+}
+
+}
+
+}
+
+</script>
+<input
+type="text"
+id="search"
+placeholder="Search CMD command..."
+onkeyup="searchCommand()">
