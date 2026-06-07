@@ -1418,3 +1418,66 @@ card.style.display = "none";
 نسخ
 </button>
 <input class="search" type="text" placeholder="ابحث عن أمر CMD">
+<div class="card">
+
+<h2>How to Open CMD</h2>
+
+<img src="cmd-open.jpg"
+style="width:100%; border-radius:10px;">
+
+<p>
+1. Press the <b>Windows</b> key.<br>
+2. Type <b>cmd</b> in search.<br>
+3. Press <b>Enter</b> or click
+<b>Command Prompt</b>.
+</p>
+
+<code>cmd</code>
+
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+
+</div>
+placeholder="Search CMD command..."
+<button>🌐 Network</button>
+<button>📁 Files</button>
+<button>⚙️ System</button>
+<button>💾 Disk</button>
+<button>🔒 Security</button>
+<div class="card">
+<h2>ipconfig</h2>
+<p>Show network information</p>
+<code>ipconfig /all</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card">
+<h2>ping</h2>
+<p>Test internet connection</p>
+<code>ping google.com</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card">
+<h2>tasklist</h2>
+<p>Show running programs</p>
+<code>tasklist</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card">
+<h2>sfc</h2>
+<p>Repair system files</p>
+<code>sfc /scannow</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+cmd-open.jpg
