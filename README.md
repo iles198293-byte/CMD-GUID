@@ -1372,3 +1372,49 @@ button.innerHTML = "نسخ";
 نسخ
 </button>
 </div>
+<script>
+
+// ================== COPY BUTTON ==================
+function copyCode(btn){
+
+let code = btn.parentElement.querySelector("code").innerText;
+
+navigator.clipboard.writeText(code);
+
+btn.innerHTML = "✅ تم النسخ";
+
+setTimeout(() => {
+btn.innerHTML = "نسخ";
+}, 1500);
+
+}
+
+
+// ================== SEARCH ==================
+let searchInput = document.querySelector(".search");
+
+searchInput.addEventListener("input", function(){
+
+let value = this.value.toLowerCase();
+
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+let text = card.innerText.toLowerCase();
+
+if(text.includes(value)){
+card.style.display = "block";
+}else{
+card.style.display = "none";
+}
+
+});
+
+});
+
+</script>
+<button class="btn" onclick="copyCode(this)">
+نسخ
+</button>
+<input class="search" type="text" placeholder="ابحث عن أمر CMD">
