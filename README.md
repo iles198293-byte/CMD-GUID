@@ -214,7 +214,7 @@
 <div class="card"><h3>pause</h3><p>إيقاف مؤقت</p><code>pause</code></div>
 
 </section>
-<!DOCTYPE html>
+
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
@@ -301,7 +301,7 @@
 
 </body>
 </html>
-<!DOCTYPE html>
+
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
