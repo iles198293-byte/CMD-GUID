@@ -681,3 +681,177 @@ this.innerText = "نسخ";
 });
 
 </script>
+<div class="card">
+<h2>gpupdate</h2>
+<p>تحديث إعدادات النظام</p>
+<code>gpupdate /force</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>driverquery</h2>
+<p>عرض تعريفات الجهاز</p>
+<code>driverquery</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>getmac</h2>
+<p>عرض عنوان MAC</p>
+<code>getmac</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>nslookup</h2>
+<p>فحص DNS</p>
+<code>nslookup google.com</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>arp</h2>
+<p>عرض جدول الشبكة</p>
+<code>arp -a</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>route</h2>
+<p>عرض مسارات الشبكة</p>
+<code>route print</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>powercfg</h2>
+<p>إعدادات الطاقة</p>
+<code>powercfg /batteryreport</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>cipher</h2>
+<p>تشفير الملفات</p>
+<code>cipher</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>fc</h2>
+<p>مقارنة ملفين</p>
+<code>fc file1.txt file2.txt</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>find</h2>
+<p>البحث داخل ملف</p>
+<code>find "hello" file.txt</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>findstr</h2>
+<p>بحث متقدم داخل الملفات</p>
+<code>findstr hello test.txt</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>attrib</h2>
+<p>إخفاء أو إظهار الملفات</p>
+<code>attrib +h file.txt</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>net user</h2>
+<p>عرض المستخدمين</p>
+<code>net user</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>net localgroup</h2>
+<p>عرض المجموعات</p>
+<code>net localgroup</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>netsh</h2>
+<p>إعدادات الشبكة</p>
+<code>netsh wlan show profiles</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>wmic</h2>
+<p>معلومات الهاردوير</p>
+<code>wmic cpu get name</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>cleanmgr</h2>
+<p>تنظيف القرص</p>
+<code>cleanmgr</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>control</h2>
+<p>فتح لوحة التحكم</p>
+<code>control</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>msconfig</h2>
+<p>إعدادات الإقلاع</p>
+<code>msconfig</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>regedit</h2>
+<p>فتح Registry</p>
+<code>regedit</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>services.msc</h2>
+<p>الخدمات</p>
+<code>services.msc</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>dxdiag</h2>
+<p>معلومات DirectX</p>
+<code>dxdiag</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>perfmon</h2>
+<p>مراقبة الأداء</p>
+<code>perfmon</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>osk</h2>
+<p>لوحة مفاتيح الشاشة</p>
+<code>osk</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>mrt</h2>
+<p>أداة إزالة الفيروسات</p>
+<code>mrt</code>
+<button class="btn">نسخ</button>
+</div>
