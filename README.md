@@ -1312,3 +1312,24 @@ this.innerHTML = "نسخ";
 
 <button class="btn">نسخ</button>
 </div>
+<script>
+
+function copyCode(button){
+
+let code =
+button.parentElement.querySelector("code").textContent;
+
+navigator.clipboard.writeText(code)
+.then(() => {
+
+button.innerHTML = "✅ تم النسخ";
+
+setTimeout(function(){
+button.innerHTML = "نسخ";
+},1500);
+
+});
+
+}
+
+</script>
