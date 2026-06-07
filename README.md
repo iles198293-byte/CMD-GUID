@@ -1280,3 +1280,35 @@ this.innerText = "نسخ";
 <code>systemreset</code>
 <button class="btn">نسخ</button>
 </div>
+<script>
+
+document.querySelectorAll(".btn").forEach(button => {
+
+button.onclick = function () {
+
+let command =
+this.parentElement.querySelector("code").innerText;
+
+navigator.clipboard.writeText(command);
+
+this.innerHTML = "✅ تم النسخ";
+
+setTimeout(() => {
+this.innerHTML = "نسخ";
+}, 1500);
+
+};
+
+});
+
+</script>
+<button class="btn">نسخ</button>
+<code>ipconfig /all</code>
+<div class="card">
+<h2>ipconfig</h2>
+<p>عرض الشبكة</p>
+
+<code>ipconfig /all</code>
+
+<button class="btn">نسخ</button>
+</div>
