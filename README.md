@@ -855,3 +855,219 @@ this.innerText = "نسخ";
 <code>mrt</code>
 <button class="btn">نسخ</button>
 </div>
+<div class="card">
+<h2>path</h2>
+<p>عرض مسارات النظام</p>
+<code>path</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>set</h2>
+<p>عرض متغيرات النظام</p>
+<code>set</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>time</h2>
+<p>عرض أو تغيير الوقت</p>
+<code>time</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>date</h2>
+<p>عرض التاريخ</p>
+<code>date</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>vol</h2>
+<p>عرض اسم القرص</p>
+<code>vol</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>label</h2>
+<p>تغيير اسم القرص</p>
+<code>label C:</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>tree</h2>
+<p>عرض شجرة الملفات</p>
+<code>tree</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>xcopy</h2>
+<p>نسخ ملفات كثيرة</p>
+<code>xcopy folder1 folder2 /E</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>robocopy</h2>
+<p>نسخ احترافي للملفات</p>
+<code>robocopy C:\A C:\B</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>clip</h2>
+<p>نسخ النص للحافظة</p>
+<code>dir | clip</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>compact</h2>
+<p>ضغط الملفات</p>
+<code>compact /c file.txt</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>expand</h2>
+<p>فك الملفات المضغوطة</p>
+<code>expand file.cab</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>replace</h2>
+<p>استبدال ملفات</p>
+<code>replace file.txt folder</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>sort</h2>
+<p>ترتيب النصوص</p>
+<code>sort file.txt</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>more</h2>
+<p>عرض النص صفحة صفحة</p>
+<code>more file.txt</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>subst</h2>
+<p>إنشاء قرص وهمي</p>
+<code>subst X: C:\Folder</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>takeown</h2>
+<p>أخذ صلاحية ملف</p>
+<code>takeown /f file.txt</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>cacls</h2>
+<p>صلاحيات الملفات</p>
+<code>cacls file.txt</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>icacls</h2>
+<p>إدارة الصلاحيات</p>
+<code>icacls folder</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>schtasks</h2>
+<p>إدارة المهام المجدولة</p>
+<code>schtasks</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>shutdown -l</h2>
+<p>تسجيل الخروج</p>
+<code>shutdown -l</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>shutdown -a</h2>
+<p>إلغاء الإيقاف</p>
+<code>shutdown -a</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>logoff</h2>
+<p>تسجيل خروج</p>
+<code>logoff</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>msg</h2>
+<p>إرسال رسالة</p>
+<code>msg * hello</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>openfiles</h2>
+<p>عرض الملفات المفتوحة</p>
+<code>openfiles</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>query user</h2>
+<p>عرض المستخدمين</p>
+<code>query user</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>quser</h2>
+<p>معلومات المستخدم</p>
+<code>quser</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>qwinsta</h2>
+<p>جلسات النظام</p>
+<code>qwinsta</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>net view</h2>
+<p>عرض أجهزة الشبكة</p>
+<code>net view</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>net share</h2>
+<p>المجلدات المشتركة</p>
+<code>net share</code>
+<button class="btn">نسخ</button>
+</div>
+
+<div class="card">
+<h2>net session</h2>
+<p>الجلسات النشطة</p>
+<code>net session</code>
+<button class="btn">نسخ</button>
+</div>
