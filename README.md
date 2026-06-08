@@ -2427,3 +2427,33 @@ body{
 
 </body>
 </html>
+/* 📦 Layout بالعرض */
+.container{
+    width:95%;
+    margin:20px auto;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+
+/* 🧩 الكروت */
+.card{
+    background:#151515;
+    width:300px; /* حجم الكرت */
+    min-height:120px;
+
+    padding:15px;
+    border-radius:10px;
+    border-left:4px solid #00ff99;
+
+    transition:0.3s;
+    animation:slide 0.5s ease;
+}
+
+/* ✨ Hover */
+.card:hover{
+    transform:translateY(-5px) scale(1.03);
+    box-shadow:0 0 20px rgba(0,255,150,0.2);
+}
