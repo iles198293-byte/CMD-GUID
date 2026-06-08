@@ -2136,7 +2136,217 @@ btn.innerHTML = "Copy";
 }
 
 </script>
+<div class="terminal">
+    <div id="cmd"></div>
+    <span class="cursor">█</span>
+</div>
+body{
+    background:#000;
+    color:#00ff66;
+    font-family: Consolas, monospace;
+}
 
+.terminal{
+    padding:20px;
+    font-size:18px;
+}
+
+.cursor{
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+const lines = [
+"C:\\Users\\CMD> Loading system...",
+"C:\\Users\\CMD> Checking errors database...",
+"C:\\Users\\CMD> Connecting to AI engine...",
+"C:\\Users\\CMD> System ready ✔",
+"C:\\Users\\CMD> Welcome to Error Center PRO"
+];
+
+let i = 0;
+let j = 0;
+let currentLine = "";
+let cmd = document.getElementById("cmd");
+
+function type(){
+    if(i < lines.length){
+        if(j < lines[i].length){
+            currentLine += lines[i][j];
+            cmd.innerHTML = lines.slice(0,i).join("<br>") + "<br>" + currentLine;
+            j++;
+            setTimeout(type, 50);
+        } else {
+            currentLine = "";
+            i++;
+            j = 0;
+            setTimeout(type, 500);
+        }
+    }
+}
+
+type();
+<audio id="keySound" src="https://assets.mixkit.co/sfx/preview/mixkit-typewriter-key-1386.mp3"></audio>
+const lines = [
+"C:\\Users\\CMD> Loading system...",
+"C:\\Users\\CMD> Checking errors database...",
+"C:\\Users\\CMD> Connecting to AI engine...",
+"C:\\Users\\CMD> System ready ✔",
+"C:\\Users\\CMD> Welcome to Error Center PRO"
+];
+
+let i = 0;
+let j = 0;
+let currentLine = "";
+let cmd = document.getElementById("cmd");
+let keySound = document.getElementById("keySound");
+
+function playKey(){
+    keySound.currentTime = 0;
+    keySound.play();
+}
+
+function type(){
+    if(i < lines.length){
+
+        if(j < lines[i].length){
+
+            currentLine += lines[i][j];
+
+            cmd.innerHTML =
+                lines.slice(0,i).join("<br>") +
+                "<br>" + currentLine;
+
+            // 🔊 صوت مع كل حرف
+            playKey();
+
+            j++;
+            setTimeout(type, 40);
+
+        } else {
+            currentLine = "";
+            i++;
+            j = 0;
+            setTimeout(type, 500);
+        }
+    }
+}
+
+type();
+<button onclick="startHack()" class="btn">▶ START HACKER MODE</button>
+
+<div id="screen" style="display:none;">
+    <div class="terminal">
+        <div id="cmd"></div>
+        <span class="cursor">█</span>
+    </div>
+</div>
+
+<audio id="keySound" src="https://assets.mixkit.co/sfx/preview/mixkit-typewriter-key-1386.mp3"></audio>
+<audio id="bootSound" src="https://assets.mixkit.co/sfx/preview/mixkit-fast-rocket-whoosh-1714.mp3"></audio>
+body{
+    margin:0;
+    background:black;
+    color:#00ff66;
+    font-family:Consolas, monospace;
+    overflow:hidden;
+}
+
+/* زر البداية */
+.btn{
+    margin:20px;
+    padding:10px 20px;
+    background:#00ff66;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* شاشة الترمنال */
+.terminal{
+    padding:20px;
+    font-size:18px;
+}
+
+/* مؤشر */
+.cursor{
+    animation:blink 0.8s infinite;
+}
+
+@keyframes blink{
+    50%{opacity:0;}
+}
+
+/* تأثير خطوط هكر */
+body::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0,255,100,0.05),
+        rgba(0,255,100,0.05) 1px,
+        transparent 2px
+    );
+    pointer-events:none;
+}
+const lines = [
+"Initializing system...",
+"Bypassing firewall...",
+"Accessing error database...",
+"Injecting AI module...",
+"Loading CMD interface...",
+"System ready ✔",
+"Welcome Hacker Mode ⚡"
+];
+
+let i=0, j=0, text="";
+let cmd = document.getElementById("cmd");
+let keySound = document.getElementById("keySound");
+let bootSound = document.getElementById("bootSound");
+
+function playKey(){
+    keySound.currentTime = 0;
+    keySound.play();
+}
+
+function startHack(){
+    document.querySelector(".btn").style.display="none";
+    document.getElementById("screen").style.display="block";
+
+    bootSound.play();
+
+    type();
+}
+
+function type(){
+    if(i < lines.length){
+
+        if(j < lines[i].length){
+            text += lines[i][j];
+
+            cmd.innerHTML =
+                lines.slice(0,i).join("<br>") +
+                "<br>" + text;
+
+            playKey();
+
+            j++;
+            setTimeout(type, 40);
+
+        } else {
+            text = "";
+            i++;
+            j=0;
+            setTimeout(type, 600);
+        }
+    }
+}
 
 
 
