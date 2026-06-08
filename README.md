@@ -2594,26 +2594,6 @@ function addFav(i){
 
 </body>
 </html>
-function getAIExplanation(error){
-    let msg = "";
 
-    switch(error.cat){
-        case "network":
-            msg = "🌐 هذا خطأ شبكة. غالباً السبب: الإنترنت ضعيف أو السيرفر لا يستجيب.";
-            break;
 
-        case "windows":
-            msg = "🪟 هذا خطأ في نظام Windows. قد يكون بسبب تعريفات أو ملفات تالفة.";
-            break;
-
-        case "games":
-            msg = "🎮 هذا خطأ ألعاب. غالباً بسبب ملفات ناقصة أو مشكلة في تشغيل اللعبة.";
-            break;
-
-        default:
-            msg = "⚙️ خطأ عام في النظام، يحتاج فحص أو إعادة تشغيل.";
-    }
-
-    return msg;
-}
-
+   
