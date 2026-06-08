@@ -1602,3 +1602,69 @@ type="text"
 id="search"
 placeholder="Search CMD command..."
 onkeyup="searchCommand()">
+<div class="card">
+
+<h2>ipconfig</h2>
+
+<p class="english">
+Show network information
+</p>
+
+<p class="translation">
+عرض معلومات الشبكة
+</p>
+
+<code>ipconfig /all</code>
+
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+
+</div>
+<style>
+
+.card{
+background:#111827;
+padding:20px;
+border-radius:15px;
+width:260px;
+text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.card h2{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.english{
+font-size:18px;
+font-weight:bold;
+color:white;
+margin:5px 0;
+}
+
+.translation{
+font-size:15px;
+color:#bdbdbd;
+margin-bottom:15px;
+}
+
+code{
+display:block;
+background:black;
+padding:10px;
+border-radius:10px;
+color:#00ff88;
+margin-bottom:10px;
+}
+
+.btn{
+width:100%;
+padding:10px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+</style>
