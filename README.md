@@ -2153,7 +2153,7 @@ btn.innerHTML = "Copy";
 
 
 
-<!DOCTYPE html>
+
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
@@ -2331,7 +2331,7 @@ if(filtered.length === 0){
     75% {transform: translateX(-5px);}
     100% {transform: translateX(0);}
 }
-<!DOCTYPE html>
+
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
@@ -2552,48 +2552,3 @@ function setCat(cat){
     searchError();
 }
 
-// 🧠 SMART SEARCH
-function searchError(){
-    let input = document.getElementById("search").value.toLowerCase();
-    let results = document.getElementById("results");
-
-    results.innerHTML = "";
-
-    let filtered = errors.filter(e =>
-        (currentCat === "all" || e.cat === currentCat) &&
-        (e.code.toLowerCase().includes(input) ||
-         e.text.toLowerCase().includes(input))
-    );
-
-    if(filtered.length === 0){
-        results.innerHTML = "❌ لا توجد نتائج";
-        return;
-    }
-
-    filtered.forEach((e,index)=>{
-        results.innerHTML += `
-        <div class="card">
-            <span class="fav" onclick="addFav(${index})">⭐</span>
-            <b>${e.code}</b><br>
-            ${e.text}<br><br>
-            💡 ${e.fix}
-        </div>
-        `;
-    });
-
-    playSound();
-}
-
-// ⭐ Favorites system
-function addFav(i){
-    favorites.push(errors[i]);
-    alert("تمت الإضافة للمفضلة ⭐");
-}
-
-</script>
-
-</body>
-</html>
-
-
-   
