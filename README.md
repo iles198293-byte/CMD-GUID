@@ -2478,15 +2478,22 @@ body{
     </div>
     <p id="ramText">0%</p>
 </div>
-<canvas id="bg"></canvas>
+
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Animated Dashboard</title>
 
 <style>
 body{
     margin:0;
     overflow:hidden;
+    font-family:Arial;
     background:black;
+    color:white;
 }
 
+/* 🔥 الخلفية */
 #bg{
     position:fixed;
     top:0;
@@ -2495,57 +2502,132 @@ body{
     height:100%;
     z-index:-1;
 }
+
+/* 🪟 الموقع */
+.dashboard{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:30px;
+
+    /* حركة دخول */
+    animation:fadeIn 1s ease;
+}
+
+/* 📦 الكروت */
+.card{
+    width:280px;
+    padding:20px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+
+    transition:0.3s;
+    animation:float 4s ease-in-out infinite;
+}
+
+/* اختلاف بسيط للحركة */
+.card:nth-child(2){
+    animation-delay:1s;
+}
+
+.card:nth-child(3){
+    animation-delay:2s;
+}
+
+.card:hover{
+    transform:scale(1.06);
+}
+
+/* ✨ حركة عائمة */
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* دخول */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 </style>
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="dashboard">
+    <div class="card">⚡ CPU Status</div>
+    <div class="card">🧠 RAM Status</div>
+    <div class="card">💾 Disk Health</div>
+</div>
 
 <script>
 const canvas = document.getElementById("bg");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = innerWidth;
+canvas.height = innerHeight;
 
-const particles = [];
+const particles=[];
 
-for(let i=0;i<120;i++){
+for(let i=0;i<100;i++){
     particles.push({
         x:Math.random()*canvas.width,
         y:Math.random()*canvas.height,
-        radius:Math.random()*3+1,
+        r:Math.random()*3+1,
         speed:Math.random()*2+0.5
     });
 }
 
-let hue = 220; // يبدأ بالأزرق
+let hue=220;
 
 function animate(){
 
-    // خلفية شفافة لعمل blur/trail
-    ctx.fillStyle = "rgba(0,0,0,0.08)";
-    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle="rgba(0,0,0,0.08)";
+    ctx.fillRect(0,0,
+    canvas.width,canvas.height);
 
-    hue += 0.3;
+    hue += 0.4;
 
     particles.forEach(p=>{
 
-        // لون متغير أزرق ← بنفسجي
-        const color =
-        `hsl(${hue % 80 + 220},100%,60%)`;
+        let color =
+        `hsl(${220 + (Math.sin(hue*0.02)*40)},100%,60%)`;
 
         ctx.beginPath();
-        ctx.arc(p.x,p.y,p.radius,0,Math.PI*2);
+        ctx.arc(
+            p.x,p.y,p.r,
+            0,Math.PI*2
+        );
 
-        ctx.shadowBlur = 20;
-        ctx.shadowColor = color;
-
-        ctx.fillStyle = color;
+        ctx.fillStyle=color;
+        ctx.shadowBlur=20;
+        ctx.shadowColor=color;
         ctx.fill();
 
         p.y += p.speed;
 
-        // إعادة من الأعلى
         if(p.y > canvas.height){
             p.y = -10;
-            p.x = Math.random()*canvas.width;
+            p.x =
+            Math.random()*canvas.width;
         }
     });
 
@@ -2553,12 +2635,7 @@ function animate(){
 }
 
 animate();
-
-// Responsive
-window.addEventListener("resize",()=>{
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-});
 </script>
+
+</body>
+</html>
