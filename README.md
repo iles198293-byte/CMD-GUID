@@ -2497,86 +2497,8 @@ function searchError(){
 <title>Error Center PRO</title>
 
 <style>
-body{
-    margin:0;
-    font-family:"Segoe UI", Arial;
-    background:#0a0a0a;
-    color:white;
-}
 
-/* HEADER */
-.header{
-    background:#111;
-    padding:15px;
-    text-align:center;
-    font-size:20px;
-    border-bottom:1px solid #222;
-}
-
-/* SEARCH */
-.searchBox{
-    display:flex;
-    justify-content:center;
-    margin-top:15px;
-}
-
-input{
-    width:70%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    outline:none;
-}
-
-/* CATEGORIES */
-.categories{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-top:10px;
-    flex-wrap:wrap;
-}
-
-.cat{
-    background:#1a1a1a;
-    padding:8px 12px;
-    border-radius:6px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.cat:hover{
-    background:#00aaff;
-}
-
-/* RESULTS */
-.container{
-    margin-top:20px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-.card{
-    background:#151515;
-    width:80%;
-    margin:10px;
-    padding:15px;
-    border-left:4px solid #00aaff;
-    border-radius:8px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:scale(1.02);
-}
-
-/* FAVORITE */
-.fav{
-    float:left;
-    cursor:pointer;
-    color:#ffcc00;
-}
+    
 </style>
 </head>
 
@@ -2694,5 +2616,4 @@ function getAIExplanation(error){
 
     return msg;
 }
-💡 ${e.fix}<br><br>
-🧠 AI: ${getAIExplanation(e)}
+
