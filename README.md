@@ -1668,3 +1668,132 @@ cursor:pointer;
 }
 
 </style>
+<style>
+
+/* دخول الصفحة */
+body{
+animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* عنوان الموقع */
+h1{
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 5px #38bdf8;
+}
+to{
+text-shadow:0 0 25px #38bdf8;
+}
+}
+
+/* البطاقات */
+.card{
+background:#111827;
+padding:20px;
+border-radius:20px;
+transition:0.4s;
+animation: slideUp 0.8s ease;
+position:relative;
+overflow:hidden;
+}
+
+/* حركة دخول الكروت */
+@keyframes slideUp{
+from{
+opacity:0;
+transform:translateY(60px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Hover جميل */
+.card:hover{
+transform:
+translateY(-10px)
+scale(1.03);
+
+box-shadow:
+0 0 30px rgba(37,99,235,0.7);
+}
+
+/* خط أزرق متحرك */
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:4px;
+background:linear-gradient(
+90deg,
+transparent,
+#38bdf8,
+transparent
+);
+
+transition:0.7s;
+}
+
+.card:hover::before{
+left:100%;
+}
+
+/* الأزرار */
+.btn{
+background:#2563eb;
+color:white;
+border:none;
+padding:12px;
+width:100%;
+border-radius:12px;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+/* حركة الزر */
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px #2563eb;
+}
+
+/* مربع البحث */
+.search{
+transition:0.3s;
+}
+
+.search:focus{
+transform:scale(1.03);
+box-shadow:0 0 20px #38bdf8;
+outline:none;
+}
+
+/* صورة CMD */
+img{
+transition:0.4s;
+border-radius:15px;
+}
+
+img:hover{
+transform:scale(1.04);
+box-shadow:0 0 20px #38bdf8;
+}
+
+</style>
