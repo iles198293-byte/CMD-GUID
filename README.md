@@ -1914,7 +1914,180 @@ Copy
 Copy
 </button>
 </div>
+<div class="card" data-category="network">
+<h2>netstat</h2>
+<p>Show network connections</p>
+<code>netstat -an</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
 
+<div class="card" data-category="network">
+<h2>tracert</h2>
+<p>Trace route</p>
+<code>tracert google.com</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="network">
+<h2>nslookup</h2>
+<p>DNS lookup</p>
+<code>nslookup google.com</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="network">
+<h2>arp</h2>
+<p>Show ARP table</p>
+<code>arp -a</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="network">
+<h2>hostname</h2>
+<p>Show computer name</p>
+<code>hostname</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="system">
+<h2>systeminfo</h2>
+<p>Show PC info</p>
+<code>systeminfo</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="system">
+<h2>tasklist</h2>
+<p>Running apps</p>
+<code>tasklist</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="system">
+<h2>taskkill</h2>
+<p>Close app</p>
+<code>taskkill /f /im chrome.exe</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="system">
+<h2>shutdown</h2>
+<p>Shutdown PC</p>
+<code>shutdown /s /t 0</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="system">
+<h2>restart</h2>
+<p>Restart PC</p>
+<code>shutdown /r /t 0</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="files">
+<h2>dir</h2>
+<p>Show files</p>
+<code>dir</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="files">
+<h2>cd</h2>
+<p>Change folder</p>
+<code>cd Desktop</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="files">
+<h2>mkdir</h2>
+<p>Create folder</p>
+<code>mkdir test</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="files">
+<h2>rmdir</h2>
+<p>Delete folder</p>
+<code>rmdir test</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="files">
+<h2>copy</h2>
+<p>Copy file</p>
+<code>copy a.txt b.txt</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="files">
+<h2>move</h2>
+<p>Move file</p>
+<code>move a.txt Desktop</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="files">
+<h2>del</h2>
+<p>Delete file</p>
+<code>del test.txt</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="disk">
+<h2>chkdsk</h2>
+<p>Check disk</p>
+<code>chkdsk C:</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="disk">
+<h2>diskpart</h2>
+<p>Disk manager</p>
+<code>diskpart</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="security">
+<h2>sfc</h2>
+<p>Repair system</p>
+<code>sfc /scannow</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="security">
+<h2>cipher</h2>
+<p>Encrypt files</p>
+<code>cipher</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="system">
+<h2>whoami</h2>
+<p>Current user</p>
+<code>whoami</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+<body onload="playSound()">
+<div class="card" data-category="system">
+<h2>echo</h2>
+<p>Print text</p>
+<code>echo Hello</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="system">
+<h2>color</h2>
+<p>CMD color</p>
+<code>color 0A</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="card" data-category="files">
+<h2>tree</h2>
+<p>Folder tree</p>
+<code>tree</code>
+<button class="btn" onclick="copyCode(this)">Copy</button>
+</div>
 
 <div class="card" data-category="system">
 <h2>tasklist</h2>
@@ -1963,3 +2136,4 @@ btn.innerHTML = "Copy";
 }
 
 </script>
+card.addEventListener("click", function(){
