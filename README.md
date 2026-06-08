@@ -2331,3 +2331,344 @@ if(filtered.length === 0){
     75% {transform: translateX(-5px);}
     100% {transform: translateX(0);}
 }
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Windows Error Center</title>
+
+<style>
+body{
+    margin:0;
+    font-family: "Segoe UI", Arial;
+    background:#0a0a0a;
+    color:white;
+}
+
+/* 🔵 Top Bar مثل Windows */
+.header{
+    background:#111;
+    padding:15px;
+    text-align:center;
+    font-size:20px;
+    border-bottom:1px solid #222;
+}
+
+/* 🔎 Search Box */
+.searchBox{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+input{
+    width:70%;
+    padding:12px;
+    border-radius:8px;
+    border:none;
+    outline:none;
+    font-size:16px;
+    transition:0.3s;
+}
+
+input:focus{
+    box-shadow:0 0 15px #00aaff;
+    transform:scale(1.02);
+}
+
+/* 📦 Results Area */
+.container{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* 🟥 Error Card */
+.card{
+    background:#151515;
+    width:80%;
+    margin:10px;
+    padding:15px;
+    border-left:5px solid #00aaff;
+    border-radius:8px;
+
+    animation:fadeIn 0.3s ease;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.02);
+    background:#1f1f1f;
+}
+
+/* ✨ Animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ❌ No result */
+.no{
+    margin-top:20px;
+    color:#ff4d4d;
+    animation:shake 0.3s;
+}
+
+@keyframes shake{
+    0%{transform:translateX(0);}
+    25%{transform:translateX(-5px);}
+    50%{transform:translateX(5px);}
+    75%{transform:translateX(-5px);}
+    100%{transform:translateX(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+🪟 Windows Error Center
+</div>
+
+<div class="searchBox">
+<input id="search" placeholder="اكتب كود الخطأ مثل 404 أو BSOD..." oninput="searchError()">
+</div>
+
+<div class="container" id="results"></div>
+
+<script>
+
+// 💻 Database (مختصر + قابل للتوسيع)
+const errors = [
+{code:"404", text:"Page Not Found", fix:"تأكد من الرابط أو أعد المحاولة"},
+{code:"403", text:"Access Denied", fix:"تحقق من الصلاحيات"},
+{code:"500", text:"Server Error", fix:"المشكلة من السيرفر"},
+{code:"502", text:"Bad Gateway", fix:"أعد المحاولة لاحقاً"},
+{code:"503", text:"Service Unavailable", fix:"السيرفر متوقف مؤقتاً"},
+{code:"504", text:"Timeout Error", fix:"السيرفر لم يستجب"},
+{code:"BSOD", text:"Blue Screen Error", fix:"إعادة تشغيل + فحص النظام"},
+{code:"0x80070005", text:"Access Denied", fix:"تشغيل كمسؤول"},
+{code:"0x80004005", text:"Unknown Error", fix:"تحديث النظام"},
+{code:"No Internet", text:"Network Error", fix:"إعادة تشغيل الراوتر"},
+{code:"Disk Full", text:"Storage Full", fix:"حذف الملفات غير المهمة"},
+];
+
+// 🔥 Instant Search (بدون زر)
+function searchError(){
+    let input = document.getElementById("search").value.toLowerCase();
+    let results = document.getElementById("results");
+
+    results.innerHTML = "";
+
+    let filtered = errors.filter(e =>
+        e.code.toLowerCase().includes(input)
+    );
+
+    if(input === ""){
+        results.innerHTML = "<p style='opacity:0.5'>اكتب كود خطأ للبحث...</p>";
+        return;
+    }
+
+    if(filtered.length === 0){
+        results.innerHTML = "<div class='no'>❌ لا يوجد نتيجة</div>";
+        return;
+    }
+
+    filtered.forEach(e=>{
+        results.innerHTML += `
+        <div class="card">
+            <b>🔴 ${e.code}</b><br>
+            <small>${e.text}</small><br><br>
+            <span>💡 ${e.fix}</span>
+        </div>
+        `;
+    });
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Error Center PRO</title>
+
+<style>
+body{
+    margin:0;
+    font-family:"Segoe UI", Arial;
+    background:#0a0a0a;
+    color:white;
+}
+
+/* HEADER */
+.header{
+    background:#111;
+    padding:15px;
+    text-align:center;
+    font-size:20px;
+    border-bottom:1px solid #222;
+}
+
+/* SEARCH */
+.searchBox{
+    display:flex;
+    justify-content:center;
+    margin-top:15px;
+}
+
+input{
+    width:70%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+}
+
+/* CATEGORIES */
+.categories{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:10px;
+    flex-wrap:wrap;
+}
+
+.cat{
+    background:#1a1a1a;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.cat:hover{
+    background:#00aaff;
+}
+
+/* RESULTS */
+.container{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.card{
+    background:#151515;
+    width:80%;
+    margin:10px;
+    padding:15px;
+    border-left:4px solid #00aaff;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.02);
+}
+
+/* FAVORITE */
+.fav{
+    float:left;
+    cursor:pointer;
+    color:#ffcc00;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">🪟 Error Center PRO</div>
+
+<div class="searchBox">
+<input id="search" placeholder="ابحث عن Error..." oninput="searchError()">
+</div>
+
+<!-- CATEGORIES -->
+<div class="categories">
+<div class="cat" onclick="setCat('all')">الكل</div>
+<div class="cat" onclick="setCat('windows')">Windows</div>
+<div class="cat" onclick="setCat('network')">Network</div>
+<div class="cat" onclick="setCat('games')">Games</div>
+</div>
+
+<div class="container" id="results"></div>
+
+<audio id="sound">
+<source src="https://assets.mixkit.co/sfx/preview/mixkit-software-interface-start-2574.mp3">
+</audio>
+
+<script>
+
+let currentCat = "all";
+
+// 🧠 Database PRO
+const errors = [
+{code:"404", text:"Page Not Found", fix:"تحقق من الرابط", cat:"network"},
+{code:"403", text:"Access Denied", fix:"صلاحيات غير كافية", cat:"network"},
+{code:"500", text:"Server Error", fix:"مشكلة في السيرفر", cat:"network"},
+{code:"BSOD", text:"Blue Screen", fix:"إعادة تشغيل وفحص النظام", cat:"windows"},
+{code:"0x80070005", text:"Windows Error", fix:"تشغيل كمسؤول", cat:"windows"},
+{code:"Steam Error", text:"Game not launching", fix:"إعادة تثبيت اللعبة", cat:"games"},
+];
+
+// ⭐ Favorites
+let favorites = [];
+
+// 🔊 sound
+function playSound(){
+    document.getElementById("sound").play();
+}
+
+// 🗂️ category
+function setCat(cat){
+    currentCat = cat;
+    searchError();
+}
+
+// 🧠 SMART SEARCH
+function searchError(){
+    let input = document.getElementById("search").value.toLowerCase();
+    let results = document.getElementById("results");
+
+    results.innerHTML = "";
+
+    let filtered = errors.filter(e =>
+        (currentCat === "all" || e.cat === currentCat) &&
+        (e.code.toLowerCase().includes(input) ||
+         e.text.toLowerCase().includes(input))
+    );
+
+    if(filtered.length === 0){
+        results.innerHTML = "❌ لا توجد نتائج";
+        return;
+    }
+
+    filtered.forEach((e,index)=>{
+        results.innerHTML += `
+        <div class="card">
+            <span class="fav" onclick="addFav(${index})">⭐</span>
+            <b>${e.code}</b><br>
+            ${e.text}<br><br>
+            💡 ${e.fix}
+        </div>
+        `;
+    });
+
+    playSound();
+}
+
+// ⭐ Favorites system
+function addFav(i){
+    favorites.push(errors[i]);
+    alert("تمت الإضافة للمفضلة ⭐");
+}
+
+</script>
+
+</body>
+</html>
