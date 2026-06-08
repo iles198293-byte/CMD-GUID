@@ -1902,3 +1902,93 @@ Copy
 </button>
 
 </div>
+<button onclick="showCategory('all')">
+📂 جميع الأوامر
+</button>
+
+<button onclick="showCategory('network')">
+🌐 أوامر الشبكة
+</button>
+
+<button onclick="showCategory('files')">
+📁 أوامر الملفات
+</button>
+
+<button onclick="showCategory('system')">
+⚙️ أوامر النظام
+</button>
+
+<button onclick="showCategory('disk')">
+💾 إدارة الأقراص
+</button>
+
+<button onclick="showCategory('security')">
+🔒 أوامر الحماية
+</button>
+<div class="card" data-category="network">
+<h2>ipconfig</h2>
+<p>Show network information</p>
+<code>ipconfig /all</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+
+<div class="card" data-category="files">
+<h2>dir</h2>
+<p>Show files</p>
+<code>dir</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+
+<div class="card" data-category="system">
+<h2>tasklist</h2>
+<p>Show running programs</p>
+<code>tasklist</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+<script>
+
+function showCategory(category){
+
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+if(category === "all"){
+card.style.display = "block";
+}
+else if(card.dataset.category === category){
+card.style.display = "block";
+}
+else{
+card.style.display = "none";
+}
+
+});
+
+}
+
+
+function copyCode(btn){
+
+let code =
+btn.parentElement.querySelector("code").innerText;
+
+navigator.clipboard.writeText(code);
+
+btn.innerHTML = "✅ Copied";
+
+setTimeout(() => {
+btn.innerHTML = "Copy";
+},1500);
+
+}
+
+</script>
