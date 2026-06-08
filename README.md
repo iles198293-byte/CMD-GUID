@@ -296,10 +296,7 @@ button.innerHTML = "نسخ";
 </div>
 
 </main>
-</div>
 
-</body>
-</html>
 
 <html lang="ar">
 <head>
@@ -478,7 +475,7 @@ color:#00ff88;
 <body>
 
 <header>
-<h1>CMD Guide DZ</h1>
+<h1>CMD Guide for windows</h1>
 <input class="search" type="text" placeholder="ابحث عن أمر CMD">
 </header>
 
