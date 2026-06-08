@@ -2136,4 +2136,4 @@ btn.innerHTML = "Copy";
 }
 
 </script>
-card.addEventListener("click", function(){
+
