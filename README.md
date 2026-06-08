@@ -386,7 +386,7 @@ margin:10px;
 <body>
 
 <header class="topbar">
-<h1>CMD Guide DZ</h1>
+<h1>CMD Guide for windows</h1>
 <input type="text" placeholder="ابحث عن أمر CMD">
 </header>
 
@@ -423,7 +423,7 @@ margin:10px;
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>CMD Guide DZ</title>
+<title>CMD Guide for windows</title>
 
 <style>
 body{
