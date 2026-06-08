@@ -244,32 +244,6 @@ button.innerHTML = "نسخ";
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CMD Guide DZ</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header class="topbar">
-    <div class="logo">
-        <h1>CMD Guide DZ</h1>
-        <p>كل أوامر CMD في مكان واحد</p>
-    </div>
-
-    <input type="text" placeholder="ابحث عن أمر مثل ipconfig">
-</header>
-
-<div class="container">
-
-<aside class="sidebar">
-    <h2>التصنيفات</h2>
-
-    <button>🌐 أوامر الشبكة</button>
-    <button>📁 أوامر الملفات</button>
-    <button>⚙️ أوامر النظام</button>
-    <button>💾 إدارة الأقراص</button>
-    <button>🔒 أوامر الحماية</button>
-</aside>
 
 <main class="content">
 
