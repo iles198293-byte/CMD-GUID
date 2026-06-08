@@ -2426,34 +2426,55 @@ body{
 <div class="card">🔐 الأمان: لا تفتح ملفات مجهولة</div>
 
 </body>
-</html>
-/* 📦 Layout بالعرض */
-.container{
-    width:95%;
-    margin:20px auto;
+<div class="header">
+🖥️ PC Health Dashboard
+</div>
 
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-    justify-content:center;
-}
+<div class="dashboard">
 
-/* 🧩 الكروت */
-.card{
-    background:#151515;
-    width:300px; /* حجم الكرت */
-    min-height:120px;
+    <div class="box score">
+        <h2>Health Score</h2>
+        <div id="score">92/100</div>
+    </div>
 
-    padding:15px;
-    border-radius:10px;
-    border-left:4px solid #00ff99;
+    <div class="box">
+        <h2>CPU</h2>
+        <p>⚡ Stable</p>
+    </div>
 
-    transition:0.3s;
-    animation:slide 0.5s ease;
-}
+    <div class="box">
+        <h2>RAM</h2>
+        <p>🧠 Good Memory Usage</p>
+    </div>
 
-/* ✨ Hover */
-.card:hover{
-    transform:translateY(-5px) scale(1.03);
-    box-shadow:0 0 20px rgba(0,255,150,0.2);
-}
+    <div class="box">
+        <h2>Disk</h2>
+        <p>💾 70% Used</p>
+    </div>
+
+    <div class="box alert">
+        <h2>Alerts</h2>
+        <p>🔔 No Critical Problems</p>
+    </div>
+
+    <div class="box tip">
+        <h2>AI Tips</h2>
+        <p>💡 Clean temp files weekly</p>
+    </div>
+
+</div>
+<div class="box">
+    <h2>⚡ CPU Usage</h2>
+    <div class="meter">
+        <div class="fill cpu" id="cpuBar"></div>
+    </div>
+    <p id="cpuText">0%</p>
+</div>
+
+<div class="box">
+    <h2>🧠 RAM Usage</h2>
+    <div class="meter">
+        <div class="fill ram" id="ramBar"></div>
+    </div>
+    <p id="ramText">0%</p>
+</div>
