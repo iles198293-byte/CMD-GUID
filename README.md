@@ -2478,3 +2478,87 @@ body{
     </div>
     <p id="ramText">0%</p>
 </div>
+<canvas id="bg"></canvas>
+
+<style>
+body{
+    margin:0;
+    overflow:hidden;
+    background:black;
+}
+
+#bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+</style>
+
+<script>
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const particles = [];
+
+for(let i=0;i<120;i++){
+    particles.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        radius:Math.random()*3+1,
+        speed:Math.random()*2+0.5
+    });
+}
+
+let hue = 220; // يبدأ بالأزرق
+
+function animate(){
+
+    // خلفية شفافة لعمل blur/trail
+    ctx.fillStyle = "rgba(0,0,0,0.08)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    hue += 0.3;
+
+    particles.forEach(p=>{
+
+        // لون متغير أزرق ← بنفسجي
+        const color =
+        `hsl(${hue % 80 + 220},100%,60%)`;
+
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.radius,0,Math.PI*2);
+
+        ctx.shadowBlur = 20;
+        ctx.shadowColor = color;
+
+        ctx.fillStyle = color;
+        ctx.fill();
+
+        p.y += p.speed;
+
+        // إعادة من الأعلى
+        if(p.y > canvas.height){
+            p.y = -10;
+            p.x = Math.random()*canvas.width;
+        }
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+// Responsive
+window.addEventListener("resize",()=>{
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+});
+</script>
