@@ -2136,3 +2136,227 @@ btn.innerHTML = "Copy";
 }
 
 </script>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>إصلاح مشاكل الكمبيوتر</title>
+<style>
+body {
+    font-family: Arial;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+.container {
+    margin-top: 50px;
+}
+.step {
+    background: #222;
+    margin: 10px auto;
+    padding: 15px;
+    width: 80%;
+    border-radius: 10px;
+}
+button {
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🛠️ دليل إصلاح مشاكل الكمبيوتر</h1>
+
+    <div class="step">1️⃣ أعد تشغيل الكمبيوتر (Restart)</div>
+    <div class="step">2️⃣ تأكد من الإنترنت</div>
+    <div class="step">3️⃣ أغلق البرامج الثقيلة</div>
+    <div class="step">4️⃣ افحص الفيروسات</div>
+    <div class="step">5️⃣ حدّث النظام (Windows Update)</div>
+
+    <button onclick="alert('جربت كل الخطوات 👍 إذا المشكلة مستمرة تحتاج فني')">
+        اضغط إذا لم تنجح الحلول
+    </button>
+</div>
+
+</body>
+</html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>موسوعة أخطاء الكمبيوتر</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#0f0f0f;
+    color:white;
+    text-align:center;
+}
+
+h1{margin-top:20px;}
+
+input{
+    padding:10px;
+    width:80%;
+    margin-top:20px;
+    border-radius:10px;
+    border:none;
+}
+
+.card{
+    background:#1e1e1e;
+    margin:10px auto;
+    padding:15px;
+    width:85%;
+    border-radius:10px;
+    text-align:right;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💻 موسوعة أخطاء الكمبيوتر + الحلول</h1>
+
+<input id="search" placeholder="اكتب رقم الخطأ مثل 404 أو BSOD..." onkeyup="searchError()">
+
+<div id="results"></div>
+
+<script>
+// 🔥 100+ Errors Database
+const errors = [
+{code:"404", text:"الصفحة غير موجودة", fix:"تأكد من الرابط أو امسح الكاش"},
+{code:"403", text:"ممنوع الدخول", fix:"تأكد من الصلاحيات أو سجل دخولك"},
+{code:"500", text:"خطأ في السيرفر", fix:"المشكلة من الموقع انتظر فقط"},
+{code:"502", text:"Bad Gateway", fix:"أعد تحميل الصفحة أو انتظر"},
+{code:"503", text:"الخدمة غير متوفرة", fix:"السيرفر متوقف مؤقتاً"},
+{code:"504", text:"Gateway Timeout", fix:"السيرفر لا يستجيب"},
+{code:"BSOD", text:"شاشة زرقاء", fix:"أعد التشغيل وافحص التعريفات"},
+{code:"Not Responding", text:"البرنامج توقف", fix:"اغلقه من Task Manager"},
+{code:"Disk Full", text:"القرص ممتلئ", fix:"احذف ملفات غير مهمة"},
+{code:"No Internet", text:"لا يوجد اتصال", fix:"أعد تشغيل الراوتر"},
+{code:"App Crash", text:"توقف التطبيق", fix:"أعد تثبيت التطبيق"},
+{code:"0x0000007B", text:"خطأ في الهارد", fix:"افحص القرص أو النظام"},
+{code:"0x80070005", text:"رفض الوصول", fix:"شغل كمسؤول Administrator"},
+{code:"0x80004005", text:"خطأ غير معروف", fix:"تحديث النظام أو إعادة تثبيت"},
+{code:"0x80070057", text:"بارامتر خاطئ", fix:"تأكد من الإعدادات"},
+{code:"ERR_CONNECTION_REFUSED", text:"رفض الاتصال", fix:"تحقق من الإنترنت أو الموقع"},
+{code:"ERR_NETWORK", text:"مشكلة شبكة", fix:"أعد تشغيل الشبكة"},
+{code:"DNS_FAIL", text:"فشل DNS", fix:"غير DNS إلى Google 8.8.8.8"},
+{code:"BOOT_ERROR", text:"فشل الإقلاع", fix:"إصلاح النظام من Recovery"},
+{code:"UPDATE_FAIL", text:"فشل التحديث", fix:"أعد تشغيل Windows Update"},
+];
+
+// 🔥 نكرر حتى نوصل 100+ (للتجربة التعليمية)
+for(let i=1;i<=90;i++){
+    errors.push({
+        code:"GEN"+i,
+        text:"خطأ عام رقم "+i,
+        fix:"أعد التشغيل أو تحقق من النظام"
+    });
+}
+
+function searchError(){
+    let input = document.getElementById("search").value.toUpperCase();
+    let results = document.getElementById("results");
+
+    results.innerHTML = "";
+
+    let filtered = errors.filter(e =>
+        e.code.toUpperCase().includes(input)
+    );
+
+    if(filtered.length === 0){
+        results.innerHTML = "<p>لا يوجد خطأ بهذا الرقم</p>";
+        return;
+    }
+
+    filtered.forEach(e=>{
+        results.innerHTML += `
+        <div class="card">
+            <h3>🔴 ${e.code}</h3>
+            <p><b>المعنى:</b> ${e.text}</p>
+            <p><b>الحل:</b> ${e.fix}</p>
+        </div>
+        `;
+    });
+}
+</script>
+
+</body>
+</html>
+body {
+    font-family: Arial;
+    background:#0f0f0f;
+    color:white;
+    text-align:center;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.98);}
+    to {opacity: 1; transform: scale(1);}
+}
+.card{
+    background:#1e1e1e;
+    margin:10px auto;
+    padding:15px;
+    width:85%;
+    border-radius:10px;
+    text-align:right;
+
+    animation: slideUp 0.4s ease;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    background:#2a2a2a;
+}
+
+@keyframes slideUp {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+input{
+    padding:10px;
+    width:80%;
+    margin-top:20px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+
+    transition: 0.3s;
+}
+
+input:focus{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00ffcc;
+}
+h1{
+    margin-top:20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {text-shadow: 0 0 5px #00ffcc;}
+    50% {text-shadow: 0 0 20px #00ffcc;}
+    100% {text-shadow: 0 0 5px #00ffcc;}
+}
+if(filtered.length === 0){
+    results.innerHTML = `
+    <div class="card" style="animation:shake 0.3s;">
+        ❌ لا يوجد خطأ بهذا الرقم
+    </div>`;
+    return;
+}
+@keyframes shake {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(-5px);}
+    50% {transform: translateX(5px);}
+    75% {transform: translateX(-5px);}
+    100% {transform: translateX(0);}
+}
