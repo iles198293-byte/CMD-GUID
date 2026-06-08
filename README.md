@@ -2287,3 +2287,143 @@ function searchError(){
 </script>
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Computer Care Center</title>
+
+<style>
+body{
+    margin:0;
+    font-family: "Segoe UI", Arial;
+    background:#0a0a0a;
+    color:white;
+    overflow-x:hidden;
+
+    /* ✨ دخول تدريجي */
+    animation: boot 1s ease-in;
+}
+
+@keyframes boot{
+    from{opacity:0; transform:scale(0.98);}
+    to{opacity:1; transform:scale(1);}
+}
+
+/* 🔵 العنوان */
+.header{
+    text-align:center;
+    padding:20px;
+    font-size:22px;
+    background:#111;
+    border-bottom:1px solid #222;
+
+    animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown{
+    from{transform:translateY(-20px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+
+/* 📦 الكروت */
+.card{
+    background:#151515;
+    width:80%;
+    margin:15px auto;
+    padding:15px;
+    border-radius:10px;
+    border-left:4px solid #00ff99;
+
+    /* ✨ حركة ظهور */
+    animation: fadeUp 0.6s ease forwards;
+    opacity:0;
+}
+
+.card:nth-child(1){animation-delay:0.2s;}
+.card:nth-child(2){animation-delay:0.4s;}
+.card:nth-child(3){animation-delay:0.6s;}
+.card:nth-child(4){animation-delay:0.8s;}
+.card:nth-child(5){animation-delay:1s;}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ✨ Hover */
+.card:hover{
+    transform:scale(1.03);
+    transition:0.3s;
+    background:#1f1f1f;
+    box-shadow:0 0 15px rgba(0,255,150,0.2);
+}
+
+/* 🟢 Progress Bar */
+.loader{
+    width:80%;
+    height:10px;
+    background:#222;
+    margin:20px auto;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.bar{
+    height:100%;
+    width:0;
+    background:#00ff99;
+    animation: load 2s ease forwards;
+}
+
+@keyframes load{
+    to{width:100%;}
+}
+
+/* ✨ تأثير نص */
+.glow{
+    text-shadow:0 0 10px #00ff99;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header glow">
+🧠 Computer Care Center
+</div>
+
+<div class="loader">
+<div class="bar"></div>
+</div>
+
+<div class="card">🪟 تحديث النظام: حافظ على Windows محدث دائماً</div>
+<div class="card">🧹 تنظيف الجهاز: احذف الملفات المؤقتة</div>
+<div class="card">🔥 الحرارة: لا تتجاوز 80 درجة</div>
+<div class="card">💾 القرص: لا تمتلئ أكثر من 80%</div>
+<div class="card">🔐 الأمان: لا تفتح ملفات مجهولة</div>
+
+</body>
+</html>
