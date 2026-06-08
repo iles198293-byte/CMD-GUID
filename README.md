@@ -1797,3 +1797,108 @@ box-shadow:0 0 20px #38bdf8;
 }
 
 </style>
+<script>
+
+// =====================
+// COPY BUTTON
+// =====================
+function copyCode(btn){
+
+let code =
+btn.parentElement.querySelector("code").innerText;
+
+navigator.clipboard.writeText(code)
+.then(() => {
+
+btn.innerHTML = "✅ Copied";
+
+setTimeout(() => {
+btn.innerHTML = "Copy";
+},1500);
+
+});
+
+}
+
+
+// =====================
+// CATEGORY FILTER
+// =====================
+function showCategory(category){
+
+let cards =
+document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+if(category === "all"){
+card.style.display = "block";
+}
+else if(card.dataset.category === category){
+card.style.display = "block";
+}
+else{
+card.style.display = "none";
+}
+
+});
+
+}
+
+</script>
+<button onclick="showCategory('all')">
+📂 All Commands
+</button>
+<button onclick="showCategory('network')">
+🌐 Network
+</button>
+
+<button onclick="showCategory('files')">
+📁 Files
+</button>
+
+<button onclick="showCategory('system')">
+⚙️ System
+</button>
+<div class="card" data-category="network">
+
+<h2>ipconfig</h2>
+
+<p>Show network information</p>
+
+<code>ipconfig /all</code>
+
+<button class="btn"
+onclick="copyCode(this)">
+Copy
+</button>
+
+</div>
+<div class="card" data-category="files">
+
+<h2>dir</h2>
+
+<p>Show files</p>
+
+<code>dir</code>
+
+<button class="btn"
+onclick="copyCode(this)">
+Copy
+</button>
+
+</div>
+<div class="card" data-category="system">
+
+<h2>tasklist</h2>
+
+<p>Show running programs</p>
+
+<code>tasklist</code>
+
+<button class="btn"
+onclick="copyCode(this)">
+Copy
+</button>
+
+</div>
