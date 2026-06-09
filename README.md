@@ -2478,4 +2478,103 @@ body{
     </div>
     <p id="ramText">0%</p>
 </div>
+<div class="container">
 
+<div class="card">
+
+    <h2>💻 فتح CMD</h2>
+
+    <div class="box">
+        <b>RUN:</b>
+        <code>cmd</code>
+    </div>
+
+    <div class="box">
+        <b>CMD:</b>
+        <code>start cmd</code>
+    </div>
+
+    <p>فتح نافذة CMD</p>
+
+    <button onclick="copyText('cmd')">
+    📋 Copy RUN
+    </button>
+
+</div>
+
+<div class="card">
+
+    <h2>⚙️ إعدادات الإقلاع</h2>
+
+    <div class="box">
+        <b>RUN:</b>
+        <code>msconfig</code>
+    </div>
+
+    <div class="box">
+        <b>CMD:</b>
+        <code>bcdedit</code>
+    </div>
+
+    <p>إعدادات Startup</p>
+
+    <button onclick="copyText('msconfig')">
+    📋 Copy RUN
+    </button>
+
+</div>
+
+<div class="card">
+
+    <h2>🧠 Task Manager</h2>
+
+    <div class="box">
+        <b>RUN:</b>
+        <code>taskmgr</code>
+    </div>
+
+    <div class="box">
+        <b>CMD:</b>
+        <code>tasklist</code>
+    </div>
+
+    <p>عرض البرامج المفتوحة</p>
+
+    <button onclick="copyText('taskmgr')">
+    📋 Copy RUN
+    </button>
+
+</div>
+
+<div class="card">
+
+    <h2>💾 تنظيف النظام</h2>
+
+    <div class="box">
+        <b>RUN:</b>
+        <code>cleanmgr</code>
+    </div>
+
+    <div class="box">
+        <b>CMD:</b>
+        <code>cleanmgr.exe</code>
+    </div>
+
+    <p>تنظيف الملفات المؤقتة</p>
+
+    <button onclick="copyText('cleanmgr')">
+    📋 Copy RUN
+    </button>
+
+</div>
+
+</div>
+
+<script>
+function copyText(text){
+    navigator.clipboard
+    .writeText(text);
+
+    alert("تم النسخ ✅");
+}
+</script>
