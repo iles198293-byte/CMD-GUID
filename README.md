@@ -2287,7 +2287,174 @@ function searchError(){
 </script>
 
 </body>
+const runCommands = [
 
+{run:"cmd",desc:"فتح CMD"},
+{run:"taskmgr",desc:"فتح Task Manager"},
+{run:"msconfig",desc:"إعدادات الإقلاع"},
+{run:"regedit",desc:"فتح Registry"},
+{run:"services.msc",desc:"إدارة الخدمات"},
+{run:"devmgmt.msc",desc:"إدارة التعريفات"},
+{run:"diskmgmt.msc",desc:"إدارة الأقراص"},
+{run:"cleanmgr",desc:"تنظيف القرص"},
+{run:"temp",desc:"ملفات مؤقتة"},
+{run:"%temp%",desc:"ملفات مؤقتة أخرى"},
+{run:"prefetch",desc:"ملفات تسريع النظام"},
+{run:"dxdiag",desc:"معلومات DirectX"},
+{run:"msinfo32",desc:"معلومات النظام"},
+{run:"control",desc:"لوحة التحكم"},
+{run:"appwiz.cpl",desc:"حذف البرامج"},
+{run:"ncpa.cpl",desc:"إعدادات الشبكة"},
+{run:"firewall.cpl",desc:"جدار الحماية"},
+{run:"resmon",desc:"مراقب الموارد"},
+{run:"eventvwr",desc:"سجل الأخطاء"},
+{run:"osk",desc:"لوحة مفاتيح الشاشة"},
+{run:"calc",desc:"الآلة الحاسبة"},
+{run:"mspaint",desc:"برنامج الرسام"},
+{run:"notepad",desc:"المفكرة"},
+{run:"explorer",desc:"مستكشف الملفات"},
+{run:"powershell",desc:"فتح PowerShell"},
+{run:"cmd",desc:"موجه الأوامر"},
+{run:"control printers",desc:"الطابعات"},
+{run:"optionalfeatures",desc:"ميزات Windows"},
+{run:"winver",desc:"إصدار Windows"},
+{run:"gpedit.msc",desc:"سياسات النظام"},
+{run:"secpol.msc",desc:"الأمان المحلي"},
+{run:"lusrmgr.msc",desc:"المستخدمون المحليون"},
+{run:"compmgmt.msc",desc:"إدارة الكمبيوتر"},
+{run:"perfmon",desc:"مراقبة الأداء"},
+{run:"mdsched",desc:"فحص RAM"},
+{run:"magnify",desc:"المكبر"},
+{run:"snippingtool",desc:"لقطة شاشة"},
+{run:"write",desc:"WordPad"},
+{run:"control keyboard",desc:"إعدادات الكيبورد"},
+{run:"control mouse",desc:"إعدادات الماوس"},
+{run:"control folders",desc:"خيارات الملفات"},
+{run:"timedate.cpl",desc:"الوقت والتاريخ"},
+{run:"inetcpl.cpl",desc:"إعدادات الإنترنت"},
+{run:"joy.cpl",desc:"إعدادات يد التحكم"},
+{run:"main.cpl",desc:"إعدادات الماوس"},
+{run:"powercfg.cpl",desc:"الطاقة"},
+{run:"sysdm.cpl",desc:"خصائص النظام"},
+{run:"desk.cpl",desc:"الشاشة"},
+{run:"control admintools",desc:"أدوات الإدارة"},
+{run:"cleanmgr",desc:"تنظيف النظام"},
+{run:"shrpubw",desc:"مشاركة الملفات"},
+{run:"wiaacmgr",desc:"الكاميرا والماسح"},
+{run:"wmimgmt.msc",desc:"إدارة WMI"},
+{run:"ms-settings:",desc:"إعدادات Windows"},
+{run:"netplwiz",desc:"حسابات المستخدم"},
+{run:"mstsc",desc:"Remote Desktop"},
+{run:"verifier",desc:"فحص التعريفات"},
+{run:"wab",desc:"دفتر العناوين"},
+{run:"wmplayer",desc:"Windows Media Player"},
+{run:"write",desc:"WordPad"},
+{run:"xpsrchvw",desc:"عارض XPS"},
+{run:"soundrecorder",desc:"مسجل الصوت"},
+{run:"dvdplay",desc:"مشغل DVD"},
+{run:"control userpasswords2",desc:"المستخدمين"},
+{run:"taskschd.msc",desc:"جدولة المهام"},
+{run:"fsmgmt.msc",desc:"المجلدات المشتركة"},
+{run:"cliconfg",desc:"إعدادات SQL"},
+{run:"isoburn",desc:"حرق ISO"},
+{run:"migwiz",desc:"نقل الملفات"},
+{run:"wabmig",desc:"استيراد جهات الاتصال"},
+{run:"certmgr.msc",desc:"إدارة الشهادات"},
+{run:"charmap",desc:"خريطة الرموز"},
+{run:"cttune",desc:"معايرة الخطوط"},
+{run:"dfrgui",desc:"إلغاء التجزئة"},
+{run:"eudcedit",desc:"أحرف خاصة"},
+{run:"iexpress",desc:"صنع ملفات EXE"},
+{run:"logoff",desc:"تسجيل الخروج"},
+{run:"shutdown",desc:"إيقاف التشغيل"},
+{run:"slui",desc:"تفعيل Windows"},
+{run:"syskey",desc:"أمان النظام"},
+{run:"tpm.msc",desc:"إدارة TPM"},
+{run:"utilman",desc:"سهولة الوصول"},
+{run:"wscript",desc:"Windows Script"},
+{run:"odbcad32",desc:"إعداد ODBC"},
+{run:"printmanagement.msc",desc:"إدارة الطباعة"},
+{run:"recdisc",desc:"قرص استرداد"},
+{run:"rekeywiz",desc:"تشفير الملفات"},
+{run:"sdclt",desc:"Backup"},
+{run:"sigverif",desc:"فحص التوقيع"},
+{run:"stikynot",desc:"Sticky Notes"},
+{run:"telephon.cpl",desc:"إعداد الهاتف"},
+{run:"usbview",desc:"عرض USB"},
+{run:"wfs",desc:"Fax and Scan"},
+{run:"wiaacmgr",desc:"ماسح ضوئي"},
+{run:"windowsdefender:",desc:"Windows Defender"},
+{run:"shell:startup",desc:"برامج Startup"},
+{run:"shell:downloads",desc:"Downloads"},
+{run:"shell:desktop",desc:"Desktop"},
+{run:"shell:documents",desc:"Documents"},
+{run:"shell:appsfolder",desc:"التطبيقات"},
+{run:"shell:cache",desc:"Cache"},
+{run:"shell:fonts",desc:"الخطوط"}
+
+];
+/* 🟣 RUN Box */
+.run-box{
+    background:rgba(255,255,255,0.06);
+    padding:12px;
+    border-radius:12px;
+
+    transition:0.35s ease;
+
+    cursor:pointer;
+}
+
+/* ✨ Animation عند المرور */
+.run-box:hover{
+
+    transform:
+    translateY(-6px)
+    scale(1.05);
+
+    background:
+    rgba(124,58,237,0.18);
+
+    border:
+    1px solid #9333ea;
+
+    box-shadow:
+    0 0 20px #9333ea,
+    0 0 40px rgba(147,51,234,0.4);
+
+    animation:
+    pulsePurple 1s infinite;
+}
+
+/* 💜 Glow متحرك */
+@keyframes pulsePurple{
+
+    0%{
+        box-shadow:
+        0 0 10px #9333ea;
+    }
+
+    50%{
+        box-shadow:
+        0 0 30px #a855f7,
+        0 0 50px #9333ea;
+    }
+
+    100%{
+        box-shadow:
+        0 0 10px #9333ea;
+    }
+}
+
+/* 💻 النص */
+.run-box code{
+    color:#c084fc;
+    font-size:17px;
+    font-weight:bold;
+}
+<div class="run-box">
+<b>RUN:</b>
+<code>cmd</code>
+</div>
 
 
 
