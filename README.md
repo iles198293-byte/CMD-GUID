@@ -2251,64 +2251,7 @@ const errors = [
 ];
 // 🚀 PERFORMANCE
 // 🚀 PERFORMANCE
-{run:"resmon",desc:"مراقبة أداء الجهاز"},
-{run:"perfmon",desc:"مراقبة الأداء المتقدم"},
-{run:"taskmgr",desc:"إدارة العمليات"},
-{run:"cleanmgr",desc:"تنظيف القرص"},
-{run:"dfrgui",desc:"إلغاء تجزئة القرص"},
 
-// 🌐 INTERNET
-{run:"ncpa.cpl",desc:"إعدادات الإنترنت"},
-{run:"inetcpl.cpl",desc:"خصائص الإنترنت"},
-{run:"firewall.cpl",desc:"جدار الحماية"},
-{run:"netplwiz",desc:"حسابات الشبكة"},
-
-// 🎮 GAMES / FPS
-{run:"dxdiag",desc:"معلومات DirectX والألعاب"},
-{run:"joy.cpl",desc:"إعدادات يد التحكم"},
-{run:"gamebar",desc:"Xbox Game Bar"},
-{run:"optionalfeatures",desc:"ميزات الألعاب"},
-
-// 💻 HARDWARE
-{run:"devmgmt.msc",desc:"إدارة التعريفات"},
-{run:"diskmgmt.msc",desc:"إدارة الأقراص"},
-{run:"msinfo32",desc:"معلومات الجهاز"},
-{run:"mdsched",desc:"فحص الرام RAM"},
-{run:"powercfg.cpl",desc:"إعدادات الطاقة"},
-
-// 🔐 SECURITY
-{run:"windowsdefender:",desc:"Windows Defender"},
-{run:"secpol.msc",desc:"سياسات الأمان"},
-{run:"certmgr.msc",desc:"الشهادات الأمنية"},
-{run:"tpm.msc",desc:"إدارة TPM"},
-
-// ⚙️ SYSTEM
-{run:"services.msc",desc:"الخدمات"},
-{run:"regedit",desc:"الريجستري"},
-{run:"gpedit.msc",desc:"سياسات Windows"},
-{run:"sysdm.cpl",desc:"خصائص النظام"},
-{run:"eventvwr",desc:"سجل الأخطاء"},
-
-// 🧹 CLEANING
-{run:"temp",desc:"ملفات مؤقتة"},
-{run:"%temp%",desc:"ملفات مؤقتة إضافية"},
-{run:"prefetch",desc:"تسريع النظام"},
-{run:"recent",desc:"الملفات الأخيرة"},
-{run:"shell:startup",desc:"برامج بدء التشغيل"},
-
-// 🪟 WINDOWS TOOLS
-{run:"winver",desc:"إصدار Windows"},
-{run:"control",desc:"لوحة التحكم"},
-{run:"cmd",desc:"موجه الأوامر CMD"},
-{run:"powershell",desc:"PowerShell"},
-{run:"explorer",desc:"مستكشف الملفات"},
-
-// 📱 USEFUL
-{run:"calc",desc:"الآلة الحاسبة"},
-{run:"notepad",desc:"المفكرة"},
-{run:"mspaint",desc:"الرسام"},
-{run:"osk",desc:"كيبورد الشاشة"},
-{run:"magnify",desc:"المكبر"}
 // 🔥 نكرر حتى نوصل 100+ (للتجربة التعليمية)
 for(let i=1;i<=90;i++){
     errors.push({
