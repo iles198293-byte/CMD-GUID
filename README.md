@@ -2553,3 +2553,245 @@ id="search"
 class="search"
 placeholder="Search CMD or RUN..."
 onkeyup="searchCommand()">
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:
+linear-gradient(
+135deg,
+#0f0c29,
+#302b63,
+#24243e
+);
+
+color:white;
+overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+text-align:center;
+padding:30px;
+backdrop-filter:blur(10px);
+}
+
+/* TITLE */
+h1{
+font-size:45px;
+color:#d8b4fe;
+text-shadow:
+0 0 10px #a855f7,
+0 0 30px #7e22ce;
+
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:
+0 0 10px #a855f7;
+}
+to{
+text-shadow:
+0 0 30px #c084fc,
+0 0 60px #7e22ce;
+}
+}
+
+/* SEARCH */
+.search{
+width:60%;
+padding:16px;
+border-radius:40px;
+border:none;
+
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+color:white;
+font-size:18px;
+
+outline:none;
+transition:.4s;
+border:2px solid transparent;
+}
+
+.search:focus{
+transform:scale(1.05);
+
+border-color:#a855f7;
+
+box-shadow:
+0 0 20px #a855f7,
+0 0 50px rgba(168,85,247,.4);
+}
+
+.search::placeholder{
+color:#d8b4fe;
+}
+
+/* MENU */
+.menu{
+width:220px;
+padding:20px;
+}
+
+.menu button{
+width:100%;
+padding:14px;
+margin-top:10px;
+border:none;
+border-radius:20px;
+
+background:
+rgba(255,255,255,.06);
+
+backdrop-filter:blur(12px);
+
+color:white;
+cursor:pointer;
+font-size:16px;
+transition:.3s;
+}
+
+/* BUTTON HOVER */
+.menu button:hover{
+
+transform:
+translateX(-5px)
+scale(1.03);
+
+background:
+rgba(168,85,247,.15);
+
+box-shadow:
+0 0 20px #a855f7;
+}
+
+/* CARDS */
+.card{
+background:
+rgba(255,255,255,.07);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+padding:20px;
+width:250px;
+transition:.45s;
+cursor:pointer;
+overflow:hidden;
+position:relative;
+
+border:
+1px solid rgba(255,255,255,.08);
+
+animation:cardEnter .8s ease;
+}
+
+/* دخول الكروت */
+@keyframes cardEnter{
+from{
+opacity:0;
+transform:translateY(60px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Hover مثل PS5 */
+.card:hover{
+
+transform:
+translateY(-12px)
+scale(1.04);
+
+box-shadow:
+0 0 25px #a855f7,
+0 0 60px rgba(168,85,247,.4);
+
+border-color:#c084fc;
+}
+
+/* ضوء متحرك */
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:4px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+#c084fc,
+transparent
+);
+
+transition:.7s;
+}
+
+.card:hover::before{
+left:100%;
+}
+
+/* TITLES */
+.card h2{
+color:#d8b4fe;
+transition:.3s;
+}
+
+.card:hover h2{
+transform:scale(1.08);
+text-shadow:
+0 0 15px #a855f7;
+}
+
+/* CMD CODE */
+code{
+display:block;
+background:
+rgba(0,0,0,.4);
+
+padding:12px;
+border-radius:12px;
+color:#c084fc;
+margin:15px 0;
+}
+
+/* COPY BUTTON */
+.btn{
+width:100%;
+padding:12px;
+border:none;
+border-radius:15px;
+cursor:pointer;
+font-size:16px;
+color:white;
+
+background:
+linear-gradient(
+135deg,
+#7e22ce,
+#a855f7
+);
+
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+
+box-shadow:
+0 0 20px #a855f7;
+}
+
+</style>
