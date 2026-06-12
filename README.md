@@ -2289,3 +2289,267 @@ function searchError(){
 </script>
 
 </body>
+<div class="cards">
+<div class="card" data-category="run">
+<h2>appwiz.cpl</h2>
+<p>Programs and Features</p>
+<code>appwiz.cpl</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card" data-category="run">
+<h2>cmd</h2>
+<p>Open Command Prompt</p>
+<code>cmd</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card" data-category="run">
+<h2>regedit</h2>
+<p>Registry Editor</p>
+<code>regedit</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card" data-category="run">
+<h2>msconfig</h2>
+<p>System Configuration</p>
+<code>msconfig</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card" data-category="run">
+<h2>services.msc</h2>
+<p>Windows Services</p>
+<code>services.msc</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card" data-category="run">
+<h2>taskmgr</h2>
+<p>Task Manager</p>
+<code>taskmgr</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card" data-category="run">
+<h2>dxdiag</h2>
+<p>DirectX Information</p>
+<code>dxdiag</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card" data-category="run">
+<h2>control</h2>
+<p>Control Panel</p>
+<code>control</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card" data-category="run">
+<h2>cleanmgr</h2>
+<p>Disk Cleanup</p>
+<code>cleanmgr</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+
+<div class="card" data-category="run">
+<h2>osk</h2>
+<p>On-Screen Keyboard</p>
+<code>osk</code>
+<button class="btn" onclick="copyCode(this)">
+Copy
+</button>
+</div>
+<button onclick="showCategory('run')">
+▶ RUN Commands
+</button>
+<style>
+
+/* خلفية بنفسجية */
+body{
+background:
+linear-gradient(
+135deg,
+#0f0c29,
+#302b63,
+#24243e
+);
+
+font-family:Arial;
+color:white;
+animation:fadeIn 1s ease;
+}
+
+/* دخول الصفحة */
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* SEARCH */
+.search{
+width:60%;
+padding:15px;
+border:none;
+border-radius:30px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+color:white;
+font-size:18px;
+transition:0.4s;
+outline:none;
+border:2px solid transparent;
+}
+
+/* تأثير البحث */
+.search:focus{
+transform:scale(1.05);
+border-color:#a855f7;
+
+box-shadow:
+0 0 20px #a855f7,
+0 0 40px rgba(168,85,247,.5);
+}
+
+/* Placeholder */
+.search::placeholder{
+color:#d8b4fe;
+}
+
+/* الكروت */
+.card{
+background:
+rgba(255,255,255,0.05);
+
+backdrop-filter:blur(10px);
+
+border-radius:20px;
+padding:20px;
+transition:0.4s;
+cursor:pointer;
+overflow:hidden;
+position:relative;
+border:1px solid rgba(255,255,255,.08);
+
+animation:slideUp .8s ease;
+}
+
+/* دخول الكروت */
+@keyframes slideUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Hover بنفسجي */
+.card:hover{
+
+transform:
+translateY(-10px)
+scale(1.04);
+
+box-shadow:
+0 0 25px #a855f7,
+0 0 50px rgba(168,85,247,.4);
+
+border-color:#c084fc;
+}
+
+/* خط متحرك */
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:4px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+#c084fc,
+transparent
+);
+
+transition:.6s;
+}
+
+.card:hover::before{
+left:100%;
+}
+
+/* عنوان CMD */
+.card h2{
+color:#d8b4fe;
+transition:.3s;
+}
+
+.card:hover h2{
+transform:scale(1.08);
+text-shadow:0 0 20px #a855f7;
+}
+
+/* زر النسخ */
+.btn{
+background:
+linear-gradient(
+135deg,
+#7e22ce,
+#a855f7
+);
+
+border:none;
+width:100%;
+padding:12px;
+border-radius:15px;
+color:white;
+cursor:pointer;
+transition:.3s;
+font-size:16px;
+}
+
+.btn:hover{
+transform:scale(1.06);
+
+box-shadow:
+0 0 20px #a855f7;
+}
+
+</style>
+<input
+type="text"
+id="search"
+class="search"
+placeholder="Search CMD or RUN..."
+onkeyup="searchCommand()">
